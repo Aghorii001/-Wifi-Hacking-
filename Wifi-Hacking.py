@@ -35,14 +35,14 @@ print("""\033[1;32m
 (00)Exit
 -----------------------------------------------------------------------
 """)
-    print("\nEnter your choise here : !# ")
-    var = int(input(""))
-    if var == 1 :
-        print("\nEnter the interface:(Default(wlan0/wlan1))")
-        interface = input("")
-        order = "airmon-ng start {} && airmon-ng check kill".format(interface)
-        geny  = os.system(order)
-        intro()
+print("\nEnter your choise here : !# ")
+var = int(input(""))
+if var == 1 :
+print("\nEnter the interface:(Default(wlan0/wlan1))")
+interface = input("")
+order = "airmon-ng start {} && airmon-ng check kill".format(interface)
+geny  = os.system(order)
+intro()
     elif var == 2 :
         print("\nEnter the interface:(Default(wlan0mon/wlan1mon))")
         interface = input("")
