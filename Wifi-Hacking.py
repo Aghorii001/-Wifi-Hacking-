@@ -43,13 +43,13 @@ if var == 1 :
  order = "airmon-ng start {} && airmon-ng check kill".format(interface)
  geny  = os.system(order)
  intro()
- elif var == 2 :
+  elif var == 2 :
   print("\nEnter the interface:(Default(wlan0mon/wlan1mon))")
   interface = input("")
   order = "airmon-ng stop {} && service network-manager restart".format(interface)
   geny  = os.system(order)
   intro()
-  elif var == 3 :
+   elif var == 3 :
    print("\nEnter the interface:(Default >> (wlan0mon/wlan1mon))")
    interface = input("")
    order = "airodump-ng {} -M".format(interface)
@@ -58,7 +58,7 @@ if var == 1 :
    geny  = os.system(order)
    cmd = os.system("sleep 10")
    intro()
-   elif var == 4 :
+    elif var == 4 :
     print("\nEnter the interface:(Default >>(wlan0mon/wlan1mon))")
     interface = input("")
     order     = "airodump-ng {} -M".format(interface)
@@ -80,7 +80,7 @@ if var == 1 :
     order = "airodump-ng {} --bssid {} -c {} -w {} | xterm -e aireplay-ng -0 {} -a {} {}".format(interface,bssid,channel,path,dist,bssid,interface)
     geny = os.system(order)
     intro()
-    elif var == 5 :
+     elif var == 5 :
      def wire():
       cmd = os.system("clear")
       print("""
