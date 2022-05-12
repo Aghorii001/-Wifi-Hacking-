@@ -9,8 +9,8 @@ print("\n")
 cmd0 = os.system("apt-get install aircrack-ng crunch xterm wordlists reaver pixiewps bully xterm wifite")
 cmd  = os.system("sleep 3 && clear")
 def intro():0o21
-    cmd = os.system("clear")
-    print("""\033[1;32m
+cmd = os.system("clear")
+print("""\033[1;32m
 ---------------------------------------------------------------------------------------
 ██╗    ██╗██╗███████╗██╗       ██████╗██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗ 
 ██║    ██║██║██╔════╝██║      ██╔════╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
