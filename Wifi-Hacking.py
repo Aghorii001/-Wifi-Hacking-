@@ -1,6 +1,3 @@
-
-# coding: utf-8
-#!/usr/bin/env python
 import os
 import subprocess
 from subprocess import check_call
@@ -8,9 +5,9 @@ print("\nInstalling Needed Tools")
 print("\n")
 cmd0 = os.system("apt-get install aircrack-ng crunch xterm wordlists reaver pixiewps bully xterm wifite")
 cmd  = os.system("sleep 3 && clear")
-def intro():0o21
-cmd = os.system("clear")
-print("""\033[1;32m
+def intro():
+    cmd  = os.system("clear")
+    print("""\033[1;32m
 ---------------------------------------------------------------------------------------
 ██╗    ██╗██╗███████╗██╗       ██████╗██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗ 
 ██║    ██║██║██╔════╝██║      ██╔════╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
@@ -18,7 +15,7 @@ print("""\033[1;32m
 ██║███╗██║██║██╔══╝  ██║╚════╝██║     ██╔══██╗██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
 ╚███╔███╔╝██║██║     ██║      ╚██████╗██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
  ╚══╝╚══╝ ╚═╝╚═╝     ╚═╝       ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-                                                        Coded By Aghorii001
+                                                        Coded By Aghorii
 ---------------------------------------------------------------------------------------                                                                     
 (1)Start monitor mode       
 (2)Stop monitor mode                        
@@ -35,55 +32,55 @@ print("""\033[1;32m
 (00)Exit
 -----------------------------------------------------------------------
 """)
-print("\nEnter your choise here : !# ")
-var = int(input(""))
-if var == 1 :
- print("\nEnter the interface:(Default(wlan0/wlan1))")
- interface = input("")
- order = "airmon-ng start {} && airmon-ng check kill".format(interface)
- geny  = os.system(order)
- intro()
-  elif var == 2 :
-  print("\nEnter the interface:(Default(wlan0mon/wlan1mon))")
-  interface = input("")
-  order = "airmon-ng stop {} && service network-manager restart".format(interface)
-  geny  = os.system(order)
-  intro()
-   elif var == 3 :
-   print("\nEnter the interface:(Default >> (wlan0mon/wlan1mon))")
-   interface = input("")
-   order = "airodump-ng {} -M".format(interface)
-   print("When Done Press CTRL+c")
-   cmd = os.system("sleep 3")
-   geny  = os.system(order)
-   cmd = os.system("sleep 10")
-   intro()
+    print("\nEnter your choise here : !# ")
+    var = int(input(""))
+    if var == 1 :
+        print("\nEnter the interface:(Default(wlan0/wlan1))")
+        interface = input("")
+        order = "airmon-ng start {} && airmon-ng check kill".format(interface)
+        geny  = os.system(order)
+        intro()
+    elif var == 2 :
+        print("\nEnter the interface:(Default(wlan0mon/wlan1mon))")
+        interface = input("")
+        order = "airmon-ng stop {} && service network-manager restart".format(interface)
+        geny  = os.system(order)
+        intro()
+    elif var == 3 :
+        print("\nEnter the interface:(Default >> (wlan0mon/wlan1mon))")
+        interface = input("")
+        order = "airodump-ng {} -M".format(interface)
+        print("When Done Press CTRL+c")
+        cmd = os.system("sleep 3")
+        geny  = os.system(order)
+        cmd = os.system("sleep 10")
+        intro()
     elif var == 4 :
-    print("\nEnter the interface:(Default >>(wlan0mon/wlan1mon))")
-    interface = input("")
-    order     = "airodump-ng {} -M".format(interface)
-    print("\nWhen Done Press CTRL+c")
-    print("\nNote: Under Probe it might be Passwords So copy them to the worlist file")
-    print("\nDon't Attack The Network if its Data is ZERO (you waste your time)")
-    print("\nyou Can use 's' to arrange networks")
-    cmd = os.system("sleep 7")
-    geny = os.system(order)
-    print("\nEnter the bssid of the target?")
-    bssid     = str(input(""))
-    print("\nEnter the channel of the network?")
-    channel   = int(input())
-    print("Enter the path of the output file ?")
-    path = str(input(""))
-    print("\nEnter the number of the packets [1-10000] ( 0 for unlimited number)")
-    print("the number of the packets Depends on the Distance Between you and the network")
-    dist = int(input(""))
-    order = "airodump-ng {} --bssid {} -c {} -w {} | xterm -e aireplay-ng -0 {} -a {} {}".format(interface,bssid,channel,path,dist,bssid,interface)
-    geny = os.system(order)
-    intro()
-     elif var == 5 :
-     def wire():
-      cmd = os.system("clear")
-      print("""
+        print("\nEnter the interface:(Default >>(wlan0mon/wlan1mon))")
+        interface = input("")
+        order     = "airodump-ng {} -M".format(interface)
+        print("\nWhen Done Press CTRL+c")
+        print("\nNote: Under Probe it might be Passwords So copy them to the worlist file")
+        print("\nDon't Attack The Network if its Data is ZERO (you waste your time)")
+        print("\nyou Can use 's' to arrange networks")
+        cmd       = os.system("sleep 7")
+        geny      = os.system(order)
+        print("\nEnter the bssid of the target?")
+        bssid     = str(input(""))
+        print("\nEnter the channel of the network?")
+        channel   = int(input())
+        print("Enter the path of the output file ?")
+        path = str(input(""))
+        print("\nEnter the number of the packets [1-10000] ( 0 for unlimited number)")
+        print("the number of the packets Depends on the Distance Between you and the network")
+        dist = int(input(""))
+        order = "airodump-ng {} --bssid {} -c {} -w {} | xterm -e aireplay-ng -0 {} -a {} {}".format(interface,bssid,channel,path,dist,bssid,interface)
+        geny = os.system(order)
+        intro()
+    elif var == 5 :
+        def wire():
+            cmd = os.system("clear")
+            print("""
 1) Aircrack-ng                          17) kalibrate-rtl
 2) Asleap                               18) KillerBee
 3) Bluelog                              19) Kismet
@@ -183,9 +180,10 @@ if var == 1 :
         cmd = os.system("clear")
         print("""
 Hi.
-My Name is Aghorii. i m from Nepal.
+My Name is Aghorii. i m from Nepal
 you can find on Instagram
-https://www.instagram.com/raw_be001/
+https://www.instagram.com/raw-be001/
+Feel Free to Contact,
 """)
         quit()
     elif var == 00:
