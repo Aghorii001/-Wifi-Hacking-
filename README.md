@@ -39,8 +39,12 @@ Kali Linux / Ubuntu / Parrot OS
 
 1) sudo apt-get update && apt-get install git
 2) sudo git clone https://github.com/Aghorii001/-Password-crack-.git
-3) cd Wifi-Hacking-
-4) sudo python3 Wifi-Hacking.py
+3) cd 
+4) ls
+5)
+6) cd Wifi-Hacking-
+7) ls
+8) sudo python3 Wifi-Hacking.py
 
 Creator ; Aghorii
 Feel Free To Contact Me.
